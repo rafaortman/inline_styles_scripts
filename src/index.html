@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>DOM vanilla js</title>
+	<!-- inject-css app.css -->
+	<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+	<h1>Lista de sites</h1>
+
+	<nav>
+		<ul class="menu">
+			<li data-target="#listaPanel" class="ativo">
+				Lista de sites
+			</li>
+			<li data-target="#contatoPanel">
+				Contato
+			</li>
+		</ul>
+	</nav>
+		
+	<div id="conteudo">
+		<section id="listaPanel" class="painel ativo">
+			<h2>Lista controle</h2>
+			<ul id="lista">
+				<li>
+					<a href="http://apple.com">apple</a>
+					<button class="delete">x</button>
+				</li>
+				<li>
+					<a href="http://google.com">google</a>
+					<button class="delete">x</button>
+				</li>
+			</ul>
+			<form id="filter" action="">
+				<input type="text" id="search" placeholder="filtrar">
+			</form>
+			<form id="ToDo" action="">
+				<input type="text" name="texto" placeholder="texto" required>
+				<input type="text" name="link" placeholder="link" required>
+				<select name="sufixo" required>
+					<option value=".com" selected>.com</option>
+					<option value=".com.br">.com.br</option> 
+				</select>
+				<button>submit</button>
+				<label for="hide">
+					<input type="checkbox" id="hide" name="hide"> Hide todos
+				</label>
+			</form>
+		</section>
+		<section id="contatoPanel" class="painel">
+			<h2>Fala comigu</h2>
+			<a href="maito:rafaortman@gmail.com">rafaortman@gmail.com</a>
+		</section>
+	</div>
+
+	<script src="app.js" inline></script>
+</body>
+</html>
